@@ -1,0 +1,12 @@
+tasks:
+  - name: Install Dependencies
+    init: go mod tidy
+    command: go build .
+  - name: Run Tests
+    command: go test
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
